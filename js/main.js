@@ -1,6 +1,11 @@
+function saludar(nombre) {
+    console.log("Hola " + nombre + " vamos a ver cuando mundiales gano Argentina");
+}
+saludar("Profesor");
+
 let edad = prompt("Ingrese su edad");
 if (edad >= 18) {
-alert("Sos mayor de edad. Podés ingresar.");
+    alert("Sos mayor de edad. Podés ingresar.");
 } else {
     alert("Sos menor de edad. No podés ingresar")
 }
@@ -17,14 +22,19 @@ console.log(ganadores);
 console.log(ganadores.indexOf("Argentina 2022"));
 
 let argentinaCampeon = Number(prompt("Ingrese el año en que Argentina salio Campeon de la copa Mundial de Fútbol"));
-switch (argentinaCampeon) {
-    case 1:
-        alert("1978");
-      break;
-    case 2:
-        alert("1976");
-        break;
-    case 3:
-         alert("2022");
-      break;
+function mundial(argentinaCampeon) {
+
+    switch (argentinaCampeon) {
+        case "1978":
+            alert('Mundial Argentina 1978 - Ganador Argentina');
+            break;
+        case "1986":
+            alert('Mundial Mexico 1986 - Ganador Argentina');
+            break;
+        case "2022":
+            alert('Mundial Qatar 2022 - Ganador Argentina');
+            break;
+
+    }
 }
+mundial(argentinaCampeon);
