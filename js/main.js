@@ -22,23 +22,41 @@ function solicitarEdad(){
     }
 }
 
-const ganadores = ["Uruguay 1930", "Italia 1934", "Italia 1938", "Uruguay 1950", "Alemania 1954", "Brasil 1958", "Brasil 1962", "Inglaterra 1966", "Brasil 1970", "Alemania 1974", "Argentina 1978", "Italia 1982", "Argentina 1986", "Alemania 1990", "Brasil 1994", "Francia 1998", "Brasil 2002", "Italia 2006", "España 2010", "Alemania 2014", "Francia 2018", "Argentina 2022"]
-const newArray = ganadores.filter(winner => {
-    console.log(winner);
-    return winner.length > 2;
-})
-console.log(newArray)
+const questions = [{
+    question: ' Cuantas veces Argentina salio campeon?',
+    answer: '3',
+    affirm: 'Yay! Correcto!',
+    rebuttal: 'Error!.'
+},
+{
+    question: 'Cuantas veces salio Francia Campeon?',
+    answer: '2',
+    affirm: 'Good job!',
+    rebuttal: 'Not right.'
+}];
 
-console.log(ganadores);
-console.log(ganadores[10]);
-console.log(ganadores[12]);
-console.log(ganadores[21]);
+for (let i = 0, l = questions.length; i < l; i++) {
+    answer = prompt(questions[i].question);
 
-ganadores.push("Argentina 2026?");
-console.log(ganadores);
+    
+    if (answer !== questions[i].answer) {
+        alert(questions[i].rebuttal);
+        i--;
+    } else {
+        alert(questions[i].affirm);
+    }
+}
+let ganadores = 'Brasil fue ganador en 1958,1962,1970, 1994 y 2002. Alemania fue ganador en 1954, 1974, 1990 y 2014. Italia fue ganador en 1934, 1938, 1982 y 2006. Argentina fue ganador en 1978, 1986 y 2022. Francia fue ganador en 1998 y 2011. Uruguay fue ganador en 1930 y 1950. España fue ganador en 2010. Ingraterra fue ganador en 1966.';
+let palabra = 'Argentina';
+console.log(ganadores.search(palabra));
 
-console.log(ganadores.indexOf("Argentina 2022"));
-
+const paisesGanadores = ['Brasil', 'Alemania', 'Italia', 'Argentina', 'Francia', 'Uruguay', 'España', 'Inglaterra'];
+function filterItems(query) {
+    return paisesGanadores.filter(function (el) {
+        return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+    })
+}
+console.log(filterItems('Arg'));
 
 const quizData = [
     {
@@ -140,6 +158,5 @@ function getSelected() {
     })
     return answer
 }
-
 
 
