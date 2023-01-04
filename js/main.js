@@ -50,13 +50,20 @@ let ganadores = 'Brasil fue ganador en 1958,1962,1970, 1994 y 2002. Alemania fue
 let palabra = 'Argentina';
 console.log(ganadores.search(palabra));
 
-const paisesGanadores = ['Brasil', 'Alemania', 'Italia', 'Argentina', 'Francia', 'Uruguay', 'España', 'Inglaterra'];
-function filterItems(query) {
-    return paisesGanadores.filter(function (el) {
-        return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-    })
+const copasGanadores = [
+    { pais: 'Brasil', copas: 5},
+    { pais: 'Alemania', copas: 4},
+    { pais: 'Italia', copas: 4},
+    { pais: 'Argentina', copas: 3},
+    { pais: 'Francia', copas: 2},
+    { pais: 'Uruguay', copas: 2},
+    { pais: 'España', copas: 1},
+    { pais: 'Ingraterra', copas: 1},
+];
+function esArgentina(ganador) {
+    return ganador.pais === 'Argentina';
 }
-console.log(filterItems('Arg'));
+console.log(copasGanadores.find(esArgentina));
 
 const quizData = [
     {
@@ -158,5 +165,7 @@ function getSelected() {
     })
     return answer
 }
+
+
 
 
