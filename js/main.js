@@ -21,20 +21,26 @@ console.log(ganadores);
 
 console.log(ganadores.indexOf("Argentina 2022"));
 
-let argentinaCampeon = Number(prompt("Ingrese el año en que Argentina salio Campeon de la copa Mundial de Fútbol"));
-function mundial(argentinaCampeon) {
+var questions = [{
+    question: ' Cuantas veces Argentina salio campeon?',
+    answer: '3',
+    affirm: 'Yay! Correcto!',
+    rebuttal: 'Error!.'
+},
+{
+    question: 'Cuantas veces salio Francia Campeon?',
+    answer: '2',
+    affirm: 'Good job!',
+    rebuttal: 'Not right.'
+}];
 
-    switch (argentinaCampeon) {
-        case "1978":
-            alert('Mundial Argentina 1978 - Ganador Argentina');
-            break;
-        case "1986":
-            alert('Mundial Mexico 1986 - Ganador Argentina');
-            break;
-        case "2022":
-            alert('Mundial Qatar 2022 - Ganador Argentina');
-            break;
+for (var i = 0, l = questions.length; i < l; i++) {
+    answer = prompt(questions[i].question);
 
+    if (answer !== questions[i].answer) {
+        alert(questions[i].rebuttal);
+        i--;
+    } else {
+        alert(questions[i].affirm);
     }
 }
-mundial(argentinaCampeon);
