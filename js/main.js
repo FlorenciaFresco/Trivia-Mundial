@@ -1,51 +1,3 @@
-function saludar() {
-    const nombre = prompt('Ingrese su nombre, porfavor')
-    if (nombre.trim() === "") {
-        alert('No ingresaste ningun dato, porfavor ingrese su nombre')
-        saludar()
-    } else {
-        alert(`Te doy la bienvenida ${nombre}`)
-        solicitarEdad()
-    }
-    console.log("Hola " + nombre + " vamos a ver cuanto sabes del mundial!");
-}
-saludar();
-
-function solicitarEdad(){
-
-    let edad = parseInt(prompt("Ingrese su edad"));
-    if (edad >= 18) {
-    alert("Sos mayor de edad. Podés ingresar.");
-    
-    } else {
-        alert("Sos menor de edad. No podés ingresar")
-    }
-}
-
-const questions = [{
-    question: ' Cuantas veces Argentina salio campeon?',
-    answer: '3',
-    affirm: 'Yay! Correcto!',
-    rebuttal: 'Error!.'
-},
-{
-    question: 'Cuantas veces salio Francia Campeon?',
-    answer: '2',
-    affirm: 'Good job!',
-    rebuttal: 'Not right.'
-}];
-
-for (let i = 0, l = questions.length; i < l; i++) {
-    answer = prompt(questions[i].question);
-
-    
-    if (answer !== questions[i].answer) {
-        alert(questions[i].rebuttal);
-        i--;
-    } else {
-        alert(questions[i].affirm);
-    }
-}
 let ganadores = 'Brasil fue ganador en 1958,1962,1970, 1994 y 2002. Alemania fue ganador en 1954, 1974, 1990 y 2014. Italia fue ganador en 1934, 1938, 1982 y 2006. Argentina fue ganador en 1978, 1986 y 2022. Francia fue ganador en 1998 y 2011. Uruguay fue ganador en 1930 y 1950. España fue ganador en 2010. Ingraterra fue ganador en 1966.';
 let palabra = 'Argentina';
 console.log(ganadores.search(palabra));
@@ -64,6 +16,10 @@ function esArgentina(ganador) {
     return ganador.pais === 'Argentina';
 }
 console.log(copasGanadores.find(esArgentina));
+
+localStorage.setItem("Ganadores de copas", JSON.stringify(copasGanadores));
+const copasGanadoresEnLS = JSON.parse(localStorage.getItem("Ganadores de copas"));
+console.log(copasGanadoresEnLS);
 
 const quizData = [
     {
@@ -133,6 +89,12 @@ const c_text = document.getElementById('c_text')
 const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
+console.log(quiz.classList);
+quiz.classList.add("quiz2");
+console.log(quiz.classList);
+
+
+
 
 let currentQuiz = 0
 let score = 0
@@ -167,5 +129,26 @@ function getSelected() {
 }
 
 
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    if (answer) {
+        if (answer === quizData[currentQuiz].correct) {
+            score++
+        }
 
+        currentQuiz++
+
+        if (currentQuiz < quizData.length) {
+            loadQuiz()
+        } else {
+            quiz.innerHTML = `
+           <h2>Has contestado correctamente ${score}/${quizData.length}</h2>
+
+           <button onclick="location.reload()">Volver a Intentarlo</button>
+           `
+        }
+
+    }
+}
+)
 
