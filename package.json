@@ -1,0 +1,20 @@
+{
+  "name": "trivia-mundial",
+  "version": "1.0.0",
+  "description": "https://florenciafresco.github.io/vitalita/\r <h1 align=\"center\">Hi 👋, I'm Florencia Belén Fresco</h1>\r <h3 align=\"center\">A passionate Full Stack developer learner from Argentina</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorenciaFresco/Trivia-Mundial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlorenciaFresco/Trivia-Mundial/issues"
+  },
+  "homepage": "https://github.com/FlorenciaFresco/Trivia-Mundial#readme"
+}
