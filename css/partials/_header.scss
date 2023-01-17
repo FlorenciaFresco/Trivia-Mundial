@@ -1,0 +1,62 @@
+#index {
+    background-image: url(../img/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+    h1 {
+        color: $color2;
+        box-shadow: $color3;
+        display: flex;
+        font-size: 80px;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    h2 {
+        color: $color4;
+        font-size: 30px;
+        font-weight: 200px;
+        justify-content: right;
+        text-align: center;
+        line-height: 50px;
+        display: inline-block;
+        padding: 0 0;
+        margin: 5% 0 0 50%;
+    }
+
+    h3 {
+        color: $color5;
+        font-size: 15px;
+        font-weight: 300px;
+        text-align: center;
+        padding: 5% 0 0 50%;
+
+    }
+
+    a {
+        display: block;
+        width: 150px;
+        font-weight: 700;
+        border-radius: 10px;
+        margin: 0 0 0 70%;
+        padding: 15px 30px;
+        background-color: $color2;
+        color: $color6;
+        text-align: center;
+        justify-content: center;
+        
+        &:hover {
+                background-color: $color7;
+            }
+
+    }
+
+}

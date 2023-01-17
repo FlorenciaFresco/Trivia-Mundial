@@ -1,0 +1,71 @@
+#encuesta {
+    font-family: $fontAlegreya;
+    background-image: url(../img/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+    .quiz-container {
+            background-color: $color8;
+            border-radius: 10px;
+            box-shadow: $color9;
+            color: #EEEEEE;
+            width: 600px;
+            overflow: hidden;
+
+            .quiz-header {
+                    padding: 4rem;
+
+                    #question {
+                        padding: 1rem;
+                        text-align: center;
+                        margin: 0;
+                        color: $color6;
+   
+                    }  
+                     ul {
+                        list-style-type: none;
+                        padding: 0;
+                                                
+                        li {
+                            font-size: 1.2rem;
+                            margin: 1rem 0;
+                                                    
+                            label {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            
+                
+            
+            button {
+                background-color: $color10;
+                color: $color6;
+                border: none;
+                display: block;
+                width: 100%;
+                cursor: pointer;
+                font-size: 1.1rem;
+                font-family: $fontAlegreya, sans-serif;
+                 padding: 1.3rem;
+
+                :hover {
+                    background-color: $color7;
+                }
+                    
+                &:focus {
+                    outline: none;
+                    background-color: $color11;
+                }  
+                
+            }
+            
+    }   
+}
