@@ -1,0 +1,18 @@
+[
+    { "pais": "Brasil", "copas": 5
+    },
+    { "pais": "Alemania", "copas": 4
+    },
+    { "pais": "Italia", "copas": 4
+    },
+    { "pais": "Argentina", "copas": 3
+    },
+    { "pais": "Francia", "copas": 2
+    },
+    { "pais": "Uruguay" , "copas": 2
+    },
+    { "pais": "España", "copas": 1
+    },
+    { "pais": "Ingraterra", "copas": 1
+    }
+]
