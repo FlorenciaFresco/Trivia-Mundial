@@ -64,6 +64,26 @@ body {
   background-color: #07bd07;
 }
 
+footer{
+  color: $color2;
+  padding: 60px 0 30px 0;
+  margin: auto;
+  color: $color3;
+  overflow: hidden;
+}
+footer p{
+  display: flex;
+  width: 90%;
+  color: $color5;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $color4;
+}
+footer ul{
+  list-style-type: none;
+  padding: 0;
+}
 #encuesta {
   font-family: "Alegreya Sans SC", sans-serif;
   background-image: url(../img/1.jpg);
