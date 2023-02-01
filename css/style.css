@@ -65,20 +65,20 @@ body {
 }
 
 footer{
-  color: $color2;
+  color: #2b16ecbe;
   padding: 60px 0 30px 0;
   margin: auto;
-  color: $color3;
+  color: #03031675;
   overflow: hidden;
 }
 footer p{
   display: flex;
   width: 90%;
-  color: $color5;
+  color: #171717;
   justify-content: space-evenly;
   margin: auto;
   padding-bottom: 50px;
-  border-bottom: 1px solid $color4;
+  border-bottom: 1px solid #0d033b;
 }
 footer ul{
   list-style-type: none;
