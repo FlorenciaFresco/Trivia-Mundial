@@ -192,4 +192,31 @@ footer ul{
 }
 #encuesta .quiz-container .switch input:checked + .slider .round:before {
   border-radius: 50%;
+@media screen and (max-width: 980px) {
+    #contenedor {
+        width: 90%;
+    }
+
+    #contenido {
+        width: 60%;
+    }
+
+    #barra_lateral {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #encabezado {
+        height: auto;
+    }
+
+    #contenido {
+        width: auto;
+    }
+
+    #barra_lateral {
+        display: none;
+    }
+}
 }/*# sourceMappingURL=style.css.map */
